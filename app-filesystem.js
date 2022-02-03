@@ -17,24 +17,40 @@ http
 
     // Create File
     // fs.appendFile , fs.open , fs.writeFile
-    fs.appendFile('demo-text-1.txt','Hello Content',(err) => {
+    /*
+    fs.appendFile('demo-1.txt','Hello Content',(err) => {
         // ถ้าไม่มีไฟล์ จะสร้างไฟล์ใหม่ขึ้นมาอัตโนมัติ
         if(err) throw err;
         console.log('Create File appendFile!');
     });
-    fs.open('demo-text-2.txt','w',(err) => {
+    fs.open('demo-2.txt','w',(err) => {
         // ถ้าไม่มีไฟล์ จะสร้างไฟล์ใหม่ขึ้นมาอัตโนมัติ
         if(err) throw err;
         console.log('Create File open!');
     });
-    fs.writeFile('demo-text-3.txt','text Content',(err) => {
+    fs.writeFile('demo-3.txt','text Content',(err) => {
         // ถ้าไม่มีไฟล์ จะสร้างไฟล์ใหม่ขึ้นมาอัตโนมัติ
         if(err) throw err;
         console.log('Create File writeFile!');
     });
+    */
     
 
     // Update File
+    // fs.appendFile , fs.writeFile
+    
+    fs.appendFile('demo-4.txt','Text Content Append',(err) => {
+        if (err) throw err;
+        console.log('[Update]: AppendFile')
+    });
+    fs.writeFile('demo-5.txt','Text Write File',(err) => {
+        // replace the content of the file
+        if(err) throw err; 
+        console.log('[Update]: WriteFile')
+    });
+    
+
+
     // Delete File
     // Rename File
   })
