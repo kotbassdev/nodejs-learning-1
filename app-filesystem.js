@@ -52,12 +52,19 @@ http
     
 
     // Delete File
+    /*
     fs.unlink('demo-6.txt',(err) => {
         if(err) throw err;
         console.log('File Delete!')
         res.end();
-    })
+    });
+    */
 
     // Rename File
+    fs.rename('demo-7.txt','demo-7-rename.txt',(err) => {
+        if(err) throw err;
+        console.log('Rename Success!');
+        res.end();
+    })
   })
   .listen(5002, () => console.log("Start Server On Port:5002"));
