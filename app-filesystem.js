@@ -38,7 +38,7 @@ http
 
     // Update File
     // fs.appendFile , fs.writeFile
-    
+    /*
     fs.appendFile('demo-4.txt','Text Content Append',(err) => {
         if (err) throw err;
         console.log('[Update]: AppendFile')
@@ -48,10 +48,16 @@ http
         if(err) throw err; 
         console.log('[Update]: WriteFile')
     });
+    */
     
 
-
     // Delete File
+    fs.unlink('demo-6.txt',(err) => {
+        if(err) throw err;
+        console.log('File Delete!')
+        res.end();
+    })
+
     // Rename File
   })
   .listen(5002, () => console.log("Start Server On Port:5002"));
